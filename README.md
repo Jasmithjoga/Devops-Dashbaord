@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+# TrackIt - Enterprise DevOps Infrastructure Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TrackIt is a modern, high-performance DevOps monitoring platform designed for cloud-native infrastructure. Built with React, TypeScript, and Tailwind CSS v4, it provides real-time observability across Docker, Kubernetes, AWS, and CI/CD pipelines.
 
-Currently, two official plugins are available:
+![TrackIt Dashboard Screenshot](https://raw.githubusercontent.com/Jasmithjoga/Devops-Dashbaord/main/src/assets/hero.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Key Features
 
-## React Compiler
+- **Infrastructure Overview**: Real-time health monitoring and resource utilization across global clusters.
+- **Docker Monitoring**: Deep-dive into container status, resource usage, and active container lifecycle management.
+- **Kubernetes Insights**: Visualization of pods, nodes, and cluster health with detailed resource metrics.
+- **Enterprise CI/CD Pipelines**: End-to-end visualization of Jenkins pipelines from GitHub to AWS EC2, including live logs and build analytics.
+- **Interactive Controls**:
+  - **Notification Center**: Real-time DevOps alerts and system notifications.
+  - **Security Center**: API token management, MFA status, and detailed login activity tracking.
+  - **Customizable Settings**: Dark/Light mode, auto-refresh intervals, and notification preferences.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: React 19, Vite, TypeScript
+- **Styling**: Tailwind CSS v4 (Custom Glassmorphism Theme)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Charts**: Recharts
+- **Components**: Custom high-fidelity SaaS UI components
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Jasmithjoga/Devops-Dashbaord.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🔒 Security & Compliance
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+TrackIt includes a built-in Security Center for managing access tokens and monitoring login activity, ensuring your DevOps environment remains secure and compliant with SRE best practices.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📄 License
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+MIT License. See [LICENSE](LICENSE) for details.
